@@ -1,10 +1,10 @@
-package com.example.backkkend.model
+package com.example.backkkend.model.user
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "test_data_user")
+@Entity(tableName = "table_user")
 data class User(
     @ColumnInfo(name = "user_id") @PrimaryKey(autoGenerate = true) var id: Long? = null,
     @ColumnInfo(name = "user_first_name") var firstName: String,

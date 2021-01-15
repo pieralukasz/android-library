@@ -1,11 +1,8 @@
 package com.example.backkkend.service
 
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
 import com.example.backkkend.AppDatabase
 import com.example.backkkend.dao.UserDao
-import com.example.backkkend.model.User
+import com.example.backkkend.model.user.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
