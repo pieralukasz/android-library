@@ -24,6 +24,10 @@ object StorageService {
         BookStorageService(appDatabase)
     }
 
+    val authorStorageService: AuthorStorageService by lazy {
+        AuthorStorageService(appDatabase)
+    }
+
     val bookAuthorStorageService: BookAuthorStorageService by lazy {
         BookAuthorStorageService(appDatabase)
     }

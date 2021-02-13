@@ -15,7 +15,7 @@ data class Book(
     @ColumnInfo (name = "book_title") var name: String,
     @ColumnInfo (name = "book_type") var type: BookType,
     @ColumnInfo (name = "book_date") var date: Date,
-    @ColumnInfo (name = "current_user_id") var currentUserId: Long? = null
+    @ColumnInfo (name = "current_user_id", index = true) var currentUserId: Long? = null
 )
 
 

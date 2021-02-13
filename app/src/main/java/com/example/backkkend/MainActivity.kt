@@ -6,9 +6,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import com.example.backkkend.ui.MainViewModel
 import com.example.backkkend.databinding.ActivityMainBinding
+import com.example.backkkend.model.author.Author
+import kotlinx.coroutines.launch
 
 lateinit var appContext: Context
 lateinit var navController: NavController
@@ -29,6 +32,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
+
+        val author = Author(null, "John", "XDE")
+
+        viewModel.addNewAuthor(author)
+
+
 
 //        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 //        navController = navHostFragment.navController

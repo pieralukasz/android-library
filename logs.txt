@@ -1,0 +1,81 @@
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugRenderscript NO-SOURCE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:dataBindingMergeGenClassesDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:dataBindingTriggerDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:desugarDebugFileDependencies
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeLibDexDebug
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:compileReleaseAidl NO-SOURCE
+> Task :app:compileReleaseRenderscript NO-SOURCE
+> Task :app:dataBindingMergeDependencyArtifactsRelease
+> Task :app:dataBindingMergeGenClassesRelease
+> Task :app:generateReleaseResValues
+> Task :app:generateReleaseResources
+> Task :app:dataBindingTriggerRelease
+> Task :app:generateReleaseBuildConfig
+> Task :app:checkReleaseAarMetadata
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :app:javaPreCompileRelease
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:desugarReleaseFileDependencies
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:mergeReleaseResources
+> Task :app:collectReleaseDependencies
+> Task :app:dataBindingGenBaseClassesRelease
+
+> Task :app:kaptDebugKotlin
+/home/pieras/StudioProjects/backend-android/app/build/tmp/kapt3/stubs/debug/com/example/backkkend/model/book/Book.java:7: warning: current_user_id column references a foreign key but it is not part of an index. This may trigger full table scans whenever parent table is modified so you are highly advised to create an index that covers this column.
+public final class Book {
+             ^/home/pieras/StudioProjects/backend-android/app/build/tmp/kapt3/stubs/debug/com/example/backkkend/model/BookAuthorJoin.java:11: warning: The column author_id in the junction entity com.example.backkkend.model.BookAuthorJoin is being used to resolve a relationship but it is not covered by any index. This might cause a full table scan when resolving the relationship, it is highly advised to create an index that covers this column.
+    private final long authorId = 0L;
+                       ^/home/pieras/StudioProjects/backend-android/app/build/tmp/kapt3/stubs/debug/com/example/backkkend/model/BookAuthorJoin.java:11: warning: The column author_id in the junction entity com.example.backkkend.model.BookAuthorJoin is being used to resolve a relationship but it is not covered by any index. This might cause a full table scan when resolving the relationship, it is highly advised to create an index that covers this column.
+    private final long authorId = 0L;
+                       ^/home/pieras/StudioProjects/backend-android/app/build/tmp/kapt3/stubs/debug/com/example/backkkend/dao/BookAuthorDao.java:27: warning: The query returns some columns [author_id, author_first_name, author_last_name] which are not used by com.example.backkkend.model.book.BookWithAuthors. You can use @ColumnInfo annotation on the fields to specify the mapping. com.example.backkkend.model.book.BookWithAuthors has some fields [book_id, book_title, book_type, book_date, current_user_id] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: author_id, author_first_name, author_last_name. Fields in com.example.backkkend.model.book.BookWithAuthors: book_id, book_title, book_type, book_date, current_user_id.
+    public abstract java.util.List<com.example.backkkend.model.book.BookWithAuthors> getAllAuthorsWithBookById(long id);
+                                                                                     ^/home/pieras/StudioProjects/backend-android/app/build/tmp/kapt3/stubs/debug/com/example/backkkend/AppDatabase.java:8: warning: Schema export directory is not provided to the annotation processor so we cannot export the schema. You can either provide `room.schemaLocation` annotation processor argument OR set exportSchema to false.
+public abstract class AppDatabase extends androidx.room.RoomDatabase {
+                ^[WARN] Incremental annotation processing requested, but support is disabled because the following processors are not incremental: androidx.room.RoomProcessor (DYNAMIC).
+
+> Task :app:kaptDebugKotlin FAILED
+> Task :app:processReleaseResources
+> Task :app:mergeExtDexDebug
+48 actionable tasks: 30 executed, 18 up-to-date

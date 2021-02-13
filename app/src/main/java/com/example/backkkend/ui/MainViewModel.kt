@@ -3,11 +3,9 @@ package com.example.backkkend.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.backkkend.model.author.Author
 import com.example.backkkend.model.user.User
-import com.example.backkkend.service.BookAuthorStorageService
-import com.example.backkkend.service.BookStorageService
-import com.example.backkkend.service.StorageService
-import com.example.backkkend.service.UserStorageService
+import com.example.backkkend.service.*
 import kotlinx.coroutines.launch
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
@@ -24,7 +22,11 @@ class MainViewModel: ViewModel() {
         StorageService.bookStorageService
     }
 
-    private val authorStorageService: BookAuthorStorageService by lazy {
+    private val authorStorageService: AuthorStorageService by lazy {
+        StorageService.authorStorageService
+    }
+
+    private val bookAuthorStorageService: BookAuthorStorageService by lazy {
         StorageService.bookAuthorStorageService
     }
 
@@ -50,6 +52,12 @@ class MainViewModel: ViewModel() {
               }
             }
         },1000, 1000)
+    }
+
+    fun addNewAuthor(author: Author) {
+        viewModelScope.launch {
+            authorStorageService.addNewAuthor(author)
+        }
     }
 
     fun loadAllUsers() {
